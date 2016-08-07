@@ -14,6 +14,5 @@ export default (
     <Route path="about" component={About} />
     <Route path="home" component={Home} />
     <Route path="blog" component={Blog} />
-
   </Route>
 )

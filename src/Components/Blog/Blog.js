@@ -24,7 +24,6 @@ class List extends Component {
         posts: res.data,
         wait:false
       })
-      console.log(this.state.posts);
     });
   }
   render(){
@@ -33,7 +32,7 @@ class List extends Component {
     //理解map 和 箭头函数（ES6新语法：参考http://es6.ruanyifeng.com/）简化代码
     map((b) =>  {
           blogCards.push(
-            <BlogCard title={b.title} date={b.created_at} index={b.id} key={Math.random()}/>
+            <BlogCard title={b.title} date={b.created_at} index={b.id} url={b.name} key={Math.random()}/>
           );
         },
         this.state.posts
