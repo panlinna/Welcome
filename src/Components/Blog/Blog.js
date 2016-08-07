@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import map from 'lodash/fp/map';
 import GithubAccount from '../GithubAccount/GithubAccount.js';
 import axios from 'axios';
-
+import Circular from './Circular.js';
 import BlogCard from './BlogCard.js';
 //注意重名问题(BlogCard和blogs)
 
@@ -11,7 +11,8 @@ class List extends Component {
     constructor(){
       super();
       this.state={
-        posts:''
+        posts:'',
+        wait:true
       }
     }
 
@@ -21,7 +22,8 @@ class List extends Component {
     axios.get(address).then((res) => {
       console.log(res);
       this.setState({
-        posts: res.data
+        posts: res.data,
+        wait:false
       })
     });
   }
@@ -39,7 +41,12 @@ class List extends Component {
     return(
       <div>
         {GithubAccount}
-        {blogCards}
+        {
+        this.state.wait ?  <Circular /> :
+        <div>
+            {blogCards}
+        </div>
+      }
       </div>
     )
   }
