@@ -38,13 +38,13 @@ class BlogCard extends Component {
 
 BlogCard.propTypes = {
   title: React.PropTypes.string.isRequired,
-  index: React.PropTypes.string.isRequired,
+  index: React.PropTypes.number.isRequired,
   date: React.PropTypes.string.isRequired,
 };
 
 BlogCard.defaultProps = {
   title: "请输入标题",
-  index: 1,
+  index: 7,
   date: '2016.7.19',
 };
 
