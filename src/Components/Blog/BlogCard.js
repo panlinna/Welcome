@@ -44,7 +44,7 @@ BlogCard.propTypes = {
 
 BlogCard.defaultProps = {
   title: "请输入标题",
-  index: 7,
+  index: 1,
   date: '2016.7.19',
 };
 
