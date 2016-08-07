@@ -18,7 +18,7 @@ class List extends Component {
 
   componentDidMount(){
     //use Math random to avoid brower cache
-    let address = `https://raw.githubusercontent.com/panlinna/Welcome/master/index.json`
+    let address = `https://raw.githubusercontent.com/panlinna/Welcome/master/src/Components/posts/index.json?v=${Math.random()}`
     axios.get(address).then((res) => {
       this.setState({
         posts: res.data,

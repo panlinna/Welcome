@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import marked from 'marked';
 
 class Post extends Component {
   constructor(){
@@ -11,7 +10,7 @@ class Post extends Component {
   }
   componentDidMount(){
      // use math random to avoid browser cache
-     let address = `https://raw.githubusercontent.com/happypeter/big-demo/master/posts/${this.props.params.title}.md?v=${Math.random()}`
+     let address = `https://raw.githubusercontent.com/panlinna/Welcome/master/src/Components/posts/${this.props.params.title}.md?v=${Math.random()}`
      axios.get(address).then((res) => {
        console.log(res);
        console.log(address);
