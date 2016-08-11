@@ -6,7 +6,7 @@ import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Blog from './Components/Blog/Blog';
 import Post from './Components/Blog/Post';
-
+import './Components/style/main.css';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Home} />

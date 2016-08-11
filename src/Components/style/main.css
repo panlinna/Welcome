@@ -17,8 +17,6 @@ ul {
   padding: 0;
   list-style-type: none;
 }
-
-
 .account {
   flex-grow: 1;
   overflow-y: scroll;
@@ -82,4 +80,27 @@ ul {
 }
 .account .user-repos li  .lang {
   font-size: 14px;
+}
+.work-container{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.card{
+  width: 100%;
+  margin-bottom: 10px;
+}
+@media(min-width:500px){
+  .card{
+    width: 49%;
+  }
+}
+@media(min-width:760px){
+  .card{
+    width: 32%;
+  }
 }

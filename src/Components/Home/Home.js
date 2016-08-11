@@ -1,5 +1,5 @@
-
 import React from 'react';
+import Work from './Work';
 
 class Home extends React.Component {
 
@@ -14,7 +14,7 @@ class Home extends React.Component {
   }
     return(
       <div style={styles.root}>
-          Home
+          <Work />
       </div>
     )
   }
